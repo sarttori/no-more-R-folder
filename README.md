@@ -1,2 +1,2 @@
 # no-more-R-folder
-A simple script that relocates R's user package library folder from the home directory to ~/.local/share/R.
+This script fixes R's default behavior of creating intrusive ~/R directory by relocating R's user package library folder from the home directory (~/R) to ~/.local/share/R, aligning it better with XDG Base Directory standards and, above all, keeping the home folder clutter-free. It automatically: (i) creates a new hidden directory in ~/.local/share/R, (ii) configures ~/.Renviron to use the new path, (iii) migrates any existing packages to the new location and (iv) deletes the old folder from the home directory.
